@@ -12,10 +12,18 @@ import javax.transaction.Transactional;
 @RequiredArgsConstructor
 public class AccountService {
     private final AccountRepository accountRepository;
+    private final AccountUserRepository
 
+    /**
+     * 사용자가 있는지 조회
+     * 계좌의 번호를 생성하고
+     * 계좌를 저장하고, 그 정보를 넘긴다.
+     */
     @Transactional
     public void createAccount(Long userId, Long initialBalance) {
-
+        // 사용자가 있는지 조회
+        // 계좌의 번호를 생성하고
+        // 계좌를 저장하고, 그 정보를 넘긴다.
     }
 
     @Transactional
