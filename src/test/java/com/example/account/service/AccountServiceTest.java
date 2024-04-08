@@ -22,11 +22,17 @@ import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 class AccountServiceTest {
-    @Mock
+    @Mock // 가짜로 만들어줄 대상
     private AccountRepository accountRepository;
 
-    @InjectMocks
+    @InjectMocks // 위에 있는 가짜 Mock을 아래에 inject 해주는 것
     private AccountService accountService;
+
+    @Test
+    void testSomething() {
+        String something = "Hello " + "World";
+        assertEquals("Hello World", something);
+    }
 
     @Test
     @DisplayName("계좌 조회 성공")
