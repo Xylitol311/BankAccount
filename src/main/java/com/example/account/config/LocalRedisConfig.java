@@ -19,7 +19,6 @@ public class LocalRedisConfig {
     @PostConstruct
     public void startRedis() {
         redisServer = new RedisServer(redisPort);
-//        redisServer.start();
         try {
             redisServer.start();
         } catch (Exception e) {
@@ -29,7 +28,7 @@ public class LocalRedisConfig {
 
     @PreDestroy
     public void stopRedis() {
-        if (redisServer.isActive()) {
+        if (redisServer != null) {
             redisServer.stop();
         }
     }
