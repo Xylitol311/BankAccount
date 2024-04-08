@@ -26,7 +26,8 @@ public class AccountController {
     ) {
         accountService.createAccount(request.getUserId(),
                 request.getInitialBalance());
-        return "success";
+//        return "success";
+        return null;
     }
 
     @GetMapping("/account/{id}")
